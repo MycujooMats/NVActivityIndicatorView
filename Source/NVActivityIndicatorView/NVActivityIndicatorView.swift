@@ -456,7 +456,11 @@ public final class NVActivityIndicatorView: UIView {
     // Avoids agent crash:
     // Fatal error: Use of unimplemented initializer 'init(frame:)' for class 'NVActivityIndicatorView.NVActivityIndicatorView'
     override init(frame: CGRect) {
+        self.type = NVActivityIndicatorView.DEFAULT_TYPE
+        self.color = NVActivityIndicatorView.DEFAULT_COLOR
+        self.padding = NVActivityIndicatorView.DEFAULT_PADDING
         super.init(frame: frame)
+        isHidden = true
     }
 
     /**
@@ -553,4 +557,3 @@ public final class NVActivityIndicatorView: UIView {
         animation.setUpAnimation(in: layer, size: animationRect.size, color: color)
     }
 }
-
