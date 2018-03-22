@@ -452,6 +452,13 @@ public final class NVActivityIndicatorView: UIView {
         isHidden = true
     }
 
+    // Inserted this initializer to comply with IB expectations.
+    // Avoids agent crash:
+    // Fatal error: Use of unimplemented initializer 'init(frame:)' for class 'NVActivityIndicatorView.NVActivityIndicatorView'
+    public init(frame: CGRect) {
+        self.init(frame: frame, type: nil, color: nil, padding: nil)
+    }
+
     /**
      Create a activity indicator view.
 
